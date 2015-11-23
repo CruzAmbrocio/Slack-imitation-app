@@ -1,8 +1,20 @@
 /*Style code CSS*/
 body {
-    background-color: yellow;
+    background: url(http://cdn5.applesencia.com/wp-content/blogs.dir/17/files/2014/09/Specularity.jpg) center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
 }
 
 .icon {
-	height: 25%;
+    height: 25%;
+    display: inline-block;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    display: inline-block;
 }
