@@ -5,9 +5,11 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    text-align: center;
 }
 
+.center{
+    text-align: center;
+}
 .icon {
     height: 25%;
     display: inline-block;
@@ -17,4 +19,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     display: inline-block;
+}
+
+.linkCreate {
+    float: right;
+}
+.linkReset {
+    float: left;
 }
