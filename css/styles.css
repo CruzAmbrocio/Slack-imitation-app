@@ -21,9 +21,17 @@ body {
     display: inline-block;
 }
 
-.linkCreate {
+.linkRigth {
     float: right;
 }
-.linkReset {
+
+.linkLeft {
     float: left;
+}
+
+.linkMoreOpt{
+    color: #00578a;
+    cursor: pointer;
+    font-weight:bold;
+    font-family:'Source Sans Pro', sans-serif;
 }

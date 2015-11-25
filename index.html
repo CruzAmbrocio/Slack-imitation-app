@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html ng-app="myApp">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
@@ -35,7 +35,7 @@
 
     </head>
 
-    <body>
+    <body  ng-controller="createAccount1">
         <div class="container-fluid">
             <div class="row center">
                 <header>
@@ -48,22 +48,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 changeOfLog">
-                    <!--Div for create account section-->
-                    <div class="forCreate">
-                        <div class="center">
-                            <p>Welcome</p>
-                            <p>Create a new account!!</p>
-                            <input type="text" class="form-control" id="txtName" placeholder="User Name" name="userName" />
-                            <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
-                            <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
-                            <input type="password" class="form-control" id="txtPass2" placeholder="Reapeat Password" name="password2" />
-                            <button type="submit" class="btn btn-default">Create</button>
-                        </div>
-                        <div class="row">
-                            <a href="#Hola" class="linkLog" id="ReturnLog">Login</a>
-                            <p>By registering you agree to Slack's <a href="#terms">Terms of Service</a>.</p>
-                        </div>
-                    </div>
+
                     <!--Div for login section-->
                     <div class="forLog">
                         <div class="center">
@@ -73,10 +58,41 @@
                             <button type="submit" class="btn btn-default">Sing In</button>
                         </div>
                         <div class="row">
-                            <a href="#Hola" class="linkCreate" id="createAccount">Create New Account</a>
-                            <a href="#haha" class="linkReset" id="resetPass">Reset Password</a>
+                            <p class="linkMoreOpt linkLeft" id="createAccount">Create New Account</p>
+                            <p class="linkMoreOpt linkRigth" id="resetPass">Reset Password</p>
                         </div>
                     </div>
+
+                    <!--Div for create account section-->
+                    <div class="forCreate">
+                        <div class="center">
+                            <p>Welcome</p>
+                            <p>Create a new account!!</p>
+                            <input type="text" class="form-control" id="txtName" placeholder="User Name" name="newUserName" ng-model= "hola"/>
+                            <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="newWmail" />
+                            <input type="password" class="form-control" id="txtPass" placeholder="Password" name="newPassword" />
+                            <input type="password" class="form-control" id="txtPass2" placeholder="Reapeat Password" name="newPassword2" />
+                            <button type="submit" class="btn btn-default" ng-click="data()">Create {{hola}}</button>
+                        </div>
+                        <div class="row">
+                            <p class="linkMoreOpt" id="ReturnLog">Login</p>
+                            <p>By registering you agree to Slack's <a href="#terms">Terms of Service</a>.</p>
+                        </div>
+                    </div>
+
+                    <!--Div for reset password-->
+                    <div class="forReset">
+                        <div class="center">
+                            <p>Woo.. Did you forget your password</p>
+                            <p>Enter a Email and new password</p>
+                            <input type="email" class="form-control" id="resetTxtEmail" placeholder="Enter email" name="resetEmail" />
+                            <button type="submit" class="btn btn-default">Send</button>
+                        </div>
+                        <div class="row">
+                            <p class="linkMoreOpt" id="cancelReset">Cancel</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
