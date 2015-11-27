@@ -1,12 +1,29 @@
 //Angular Js code
-var app=angular.module('myApp', ['']);
-  app.controller('createAccount1', function($scope) {
-    $scope.data=function () {
-        // body...
-        var Name=document.getElementById("txtName").value;
-        var email=document.getElementById("txtEmail").value;
-        var pass=document.getElementById("txtPass").value;
-        var pass2=document.getElementById("txtPass2").value;
-        console.log(Name, email, pass2, pass)
+var app=angular.module('myApp', ['ngRoute']);
+
+
+app.controller('createAccount1', function($scope, $location) {
+
+    var ref = new Firebase("https://loginappfrist.firebaseio.com/");
+
+    $scope.login = function() {
+        var emailCreate = $("#createEmail").val();
+        var passwordCreate = $("#createPass").val();
+        var failCreate = false;
+
+        ref.createUser({
+          email    : emailCreate,
+          password : passwordCreate
+        }, function(error, userData) {
+          if (error) {
+            $scope.failCreate = true;
+            console.log("Error creating user:", error);
+          } else {
+            console.log("Successfully created user account with uid:", userData.uid);
+            $scope.failCreate = false;
+            alert("Se ha creado la cuenta")
+            }
+        });
     };
-  });
+});
+

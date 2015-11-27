@@ -55,7 +55,7 @@
                             <p>Login</p>
                             <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
                             <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
-                            <button type="submit" class="btn btn-default">Sing In</button>
+                            <button type="submit" class="btn btn-default" >Sing In</button>
                         </div>
                         <div class="row">
                             <p class="linkMoreOpt linkLeft" id="createAccount">Create New Account</p>
@@ -68,11 +68,11 @@
                         <div class="center">
                             <p>Welcome</p>
                             <p>Create a new account!!</p>
-                            <input type="text" class="form-control" id="txtName" placeholder="User Name" name="newUserName" ng-model= "hola"/>
-                            <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="newWmail" />
-                            <input type="password" class="form-control" id="txtPass" placeholder="Password" name="newPassword" />
-                            <input type="password" class="form-control" id="txtPass2" placeholder="Reapeat Password" name="newPassword2" />
-                            <button type="submit" class="btn btn-default" ng-click="data()">Create {{hola}}</button>
+                            <input type="text" class="form-control" id="createName" placeholder="User Name"  />
+                            <input type="email" class="form-control" id="createEmail" placeholder="Enter email"  />
+                            <input type="password" class="form-control" id="createPass" placeholder="Password"  />
+                            <input type="password" class="form-control" id="createPass2" placeholder="Reapeat Password"  />
+                            <button type="submit" class="btn btn-default" ng-click="login()">Create </button>
                         </div>
                         <div class="row">
                             <p class="linkMoreOpt" id="ReturnLog">Login</p>
@@ -92,9 +92,9 @@
                             <p class="linkMoreOpt" id="cancelReset">Cancel</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
+        <p ng-show="failCreate">hola</p>
     </body>
 </html>
