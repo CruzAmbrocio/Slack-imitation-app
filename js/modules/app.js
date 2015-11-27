@@ -4,7 +4,7 @@ var app=angular.module('myApp', ['ngRoute']);
 
 app.controller('createAccount1', function($scope, $location) {
 
-    var ref = new Firebase("https://loginappfrist.firebaseio.com/");
+    var ref = new Firebase("https://holaquehace.firebaseio.com/");
 
     $scope.login = function() {
         var emailCreate = $("#createEmail").val();
