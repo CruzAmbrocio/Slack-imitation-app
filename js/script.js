@@ -1,6 +1,7 @@
-//Js code	
+//Js code
 $(document).ready(function() {
    // jQuery methods go here...
+   //hide end show the diferents elements of login and create account
     $(".forCreate").hide();
     $(".forReset").hide();
 

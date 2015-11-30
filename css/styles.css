@@ -1,10 +1,12 @@
 /*Style code CSS*/
 body {
-    background: url(http://cdn5.applesencia.com/wp-content/blogs.dir/17/files/2014/09/Specularity.jpg) center fixed;
+    background: url(../Images/circulosDorados.png) center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: white;
+    background-attachment: fixed;
 }
 
 .center{
@@ -34,4 +36,12 @@ body {
     cursor: pointer;
     font-weight:bold;
     font-family:'Source Sans Pro', sans-serif;
+}
+
+input:invalid {
+    border: 1.5px solid red:
+}
+
+input:valid {
+    border: 1.5px solid green;
 }
