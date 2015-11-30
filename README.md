@@ -1,2 +1,2 @@
 # Slack-imitation-app
-[google](www.google.com) 
+[Slack_Imitation](http://cruzambrocio.github.io/Slack-imitation-app) 
