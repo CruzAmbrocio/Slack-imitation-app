@@ -83,5 +83,24 @@ app.controller('createAccount1', function($scope, $location) {
 
 app.controller('ChatController', function($scope, $firebase) {
   console.log("este es el chat")
+    $scope.chat= function(){
+    ref.authWithOAuthPopup("twitter", function(error, authData) {
+      if (error) {
+        console.log(error);
+      }
+    });
+  };
+
+  ref.onAuth(function(authData) {
+    // Once authenticated, instantiate Firechat with our user id and user name
+    if (authData) {
+      initChat(authData);
+    }
+  });
+  $scope.initChat= function(authData){
+
+    var chat = new FirechatUI(ref, document.getElementById('#firechat-wrapper'));
+    chat.setUser(authData.uid, authData[authData.provider].displayName);
+  };
 });
 
